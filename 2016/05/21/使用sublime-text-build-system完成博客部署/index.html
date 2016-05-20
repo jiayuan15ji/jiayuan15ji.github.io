@@ -17,7 +17,7 @@
 <meta property="og:url" content="http://www.yekaty.com/2016/05/21/使用sublime-text-build-system完成博客部署/index.html">
 <meta property="og:site_name" content="Yekaty's Blog">
 <meta property="og:description" content="本文介绍如何使用sublime text编辑器的build system功能，快速部署编辑好的博文。">
-<meta property="og:updated_time" content="2016-05-20T18:17:43.623Z">
+<meta property="og:updated_time" content="2016-05-20T18:18:35.516Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="使用sublime text build system完成博客部署">
 <meta name="twitter:description" content="本文介绍如何使用sublime text编辑器的build system功能，快速部署编辑好的博文。">
@@ -107,7 +107,7 @@
 <h6 id="方法非常简单"><a href="#方法非常简单" class="headerlink" title="方法非常简单"></a>方法非常简单</h6><ol>
 <li>Tools -&gt; Build System -&gt; New Build System新建一个编译处理文件。</li>
 <li><p>hexo博客的编译处理文件：</p>
-<figure class="highlight json"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">&#123;</span><br><span class="line">	<span class="attr">"working_dir"</span>: <span class="string">"C:\\Users\\jiayu\\Documents\\GitHub\\hexo"</span>,</span><br><span class="line">	<span class="attr">"selector"</span>: [<span class="string">"text.md"</span>],</span><br><span class="line">	<span class="attr">"cmd"</span>: [<span class="string">"hexo.cmd"</span>,<span class="string">"clean"</span>,<span class="string">"&amp;&amp;"</span>,<span class="string">"hexo.cmd"</span>,<span class="string">"g"</span>,<span class="string">"&amp;&amp;"</span>,<span class="string">"hexo.cmd"</span>,<span class="string">"d"</span>]</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<figure class="highlight json"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">&#123;</span><br><span class="line">	<span class="attr">"working_dir"</span>: <span class="string">"C:\\Users\\jiayu\\Documents\\GitHub\\hexo"</span>,<span class="attr">"selector"</span>: [<span class="string">"text.md"</span>],</span><br><span class="line">	<span class="attr">"cmd"</span>: [<span class="string">"hexo.cmd"</span>,<span class="string">"clean"</span>,<span class="string">"&amp;&amp;"</span>,<span class="string">"hexo.cmd"</span>,<span class="string">"g"</span>,<span class="string">"&amp;&amp;"</span>,<span class="string">"hexo.cmd"</span>,<span class="string">"d"</span>]</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 <p>将文件保存在user目录下。关于编译处理文件的语法，可参照<a href="http://sublime-text.readthedocs.io/en/latest/reference/build_systems.html" target="_blank" rel="external">这里</a>。</p>
 </li>
 <li>此时，编辑好博文后，便可使用<strong>Ctrl+B</strong>快捷键，快速完成博文部署工作。</li>
