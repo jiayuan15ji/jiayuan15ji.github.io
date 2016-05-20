@@ -4,32 +4,23 @@
 <head>
   <meta charset="UTF-8">
   
-    <title>重启eclipse color theme失效的解决办法 | Yekaty&#39;s Blog</title>
+    <title>使用sublime text build system完成博客部署 | Yekaty&#39;s Blog</title>
     <meta name="viewport" content="width=device-width, initial-scale=1,user-scalable=no">
     
     <meta name="author" content="jiayuanJi">
     
 
     
-    <meta name="description" content="For Eclipse Mars users:
-In the main menu bar, go to Window &amp;gt; Preferences
-In the preference tree on the left, go to Oomph &amp;gt; Preference Recorder
-Check that it is enabled at the top.（record into wo">
+    <meta name="description" content="本文介绍如何使用sublime text编辑器的build system功能，快速部署编辑好的博文。">
 <meta property="og:type" content="article">
-<meta property="og:title" content="重启eclipse color theme失效的解决办法">
-<meta property="og:url" content="http://www.yekaty.com/2016/05/21/重启eclipse-color-theme失效的解决办法/index.html">
+<meta property="og:title" content="使用sublime text build system完成博客部署">
+<meta property="og:url" content="http://www.yekaty.com/2016/05/21/使用sublime-text-build-system完成博客部署/index.html">
 <meta property="og:site_name" content="Yekaty's Blog">
-<meta property="og:description" content="For Eclipse Mars users:
-In the main menu bar, go to Window &amp;gt; Preferences
-In the preference tree on the left, go to Oomph &amp;gt; Preference Recorder
-Check that it is enabled at the top.（record into wo">
-<meta property="og:updated_time" content="2016-05-20T17:44:26.311Z">
+<meta property="og:description" content="本文介绍如何使用sublime text编辑器的build system功能，快速部署编辑好的博文。">
+<meta property="og:updated_time" content="2016-05-20T18:02:58.665Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="重启eclipse color theme失效的解决办法">
-<meta name="twitter:description" content="For Eclipse Mars users:
-In the main menu bar, go to Window &amp;gt; Preferences
-In the preference tree on the left, go to Oomph &amp;gt; Preference Recorder
-Check that it is enabled at the top.（record into wo">
+<meta name="twitter:title" content="使用sublime text build system完成博客部署">
+<meta name="twitter:description" content="本文介绍如何使用sublime text编辑器的build system功能，快速部署编辑好的博文。">
 
     
     
@@ -91,14 +82,14 @@ Check that it is enabled at the top.（record into wo">
 		<header class="article-info clearfix">
   <h1 itemprop="name">
     
-      <a href="/2016/05/21/重启eclipse-color-theme失效的解决办法/" title="重启eclipse color theme失效的解决办法" itemprop="url">重启eclipse color theme失效的解决办法</a>
+      <a href="/2016/05/21/使用sublime-text-build-system完成博客部署/" title="使用sublime text build system完成博客部署" itemprop="url">使用sublime text build system完成博客部署</a>
   </h1>
   <p class="article-author">By
        
 		<a href="/about" title="jiayuanJi" target="_blank" itemprop="author">jiayuanJi</a>
 		
   <p class="article-time">
-    <time datetime="2016-05-20T16:03:45.000Z" itemprop="datePublished"> 发表于 2016-05-21</time>
+    <time datetime="2016-05-20T17:47:54.000Z" itemprop="datePublished"> 发表于 2016-05-21</time>
     
   </p>
 </header>
@@ -107,16 +98,19 @@ Check that it is enabled at the top.（record into wo">
 		<div id="toc" class="toc-article">
 			<strong class="toc-title">文章目录</strong>
 		
-			<ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#For-Eclipse-Mars-users"><span class="toc-number">1.</span> <span class="toc-text">For Eclipse Mars users:</span></a></li></ol>
+			<ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#"><span class="toc-number">1.</span> <span class="toc-text"></span></a></li></ol>
 		
 		</div>
 		
-		<h2 id="For-Eclipse-Mars-users"><a href="#For-Eclipse-Mars-users" class="headerlink" title="For Eclipse Mars users:"></a>For Eclipse Mars users:</h2><ol>
-<li>In the main menu bar, go to Window &gt; Preferences</li>
-<li>In the preference tree on the left, go to Oomph &gt; Preference Recorder</li>
-<li>Check that it is enabled at the top.（record into workspace）</li>
-<li>Set your color theme to the desired theme, and click OK.</li>
-<li>When restarting Eclipse, it may take a few moments to load your desired theme.</li>
+		<p>本文介绍如何使用sublime text编辑器的build system功能，快速部署编辑好的博文。</p>
+<h2 id=""><a href="#" class="headerlink" title=""></a><a id="more"></a></h2><ol>
+<li>Tools -&gt; Build System -&gt; New Build System新建一个编译处理文件。</li>
+<li>hexo博客的编译处理文件：<figure class="highlight json"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">&#123;</span><br><span class="line">	<span class="attr">"working_dir"</span>: <span class="string">"C:\\Users\\jiayu\\Documents\\GitHub\\hexo"</span>,</span><br><span class="line">	<span class="attr">"selector"</span>: [<span class="string">"text.md"</span>],</span><br><span class="line">	<span class="attr">"cmd"</span>: [<span class="string">"hexo.cmd"</span>,<span class="string">"clean"</span>,<span class="string">"&amp;&amp;"</span>,<span class="string">"hexo.cmd"</span>,<span class="string">"g"</span>,<span class="string">"&amp;&amp;"</span>,<span class="string">"hexo.cmd"</span>,<span class="string">"d"</span>]</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+</li>
+</ol>
+<p>将文件保存在user目录下。关于编译处理文件的语法，可参照<a href="http://sublime-text.readthedocs.io/en/latest/reference/build_systems.html" target="_blank" rel="external">这里</a>。</p>
+<ol>
+<li>此时，编辑好博文后，便可使用<strong>Ctrl+B</strong>快捷键，快速完成博文部署工作。</li>
 </ol>
   
 	</div>
@@ -125,13 +119,13 @@ Check that it is enabled at the top.（record into wo">
 
 <div class="article-categories">
   <span></span>
-  <a class="article-category-link" href="/categories/eclipse/">eclipse</a>
+  <a class="article-category-link" href="/categories/blog/">blog</a>
 </div>
 
 
   <div class="article-tags">
   
-  <span></span> <a href="/tags/eclipse/">eclipse</a>
+  <span></span> <a href="/tags/blog/">blog</a><a href="/tags/sublime/">sublime</a>
   </div>
 
 </div>
@@ -145,17 +139,10 @@ Check that it is enabled at the top.（record into wo">
 	
 <nav class="article-nav clearfix">
  
- <div class="prev" >
- <a href="/2016/05/21/使用sublime-text-build-system完成博客部署/" title="使用sublime text build system完成博客部署">
-  <span>
-  使用sublime text build system完成博客部署</span>
-</a>
-</div>
-
 
 <div class="next">
-<a href="/2016/05/20/mysql 5.7压缩包安装方法/"  title="MySql 5.7 压缩包安装方法">
- <span>MySql 5.7 压缩包安装方法
+<a href="/2016/05/21/重启eclipse-color-theme失效的解决办法/"  title="重启eclipse color theme失效的解决办法">
+ <span>重启eclipse color theme失效的解决办法
 </span>
 </a>
 </div>
@@ -164,7 +151,7 @@ Check that it is enabled at the top.（record into wo">
 
 	
 <section id="comments" class="comment">
-	<div class="ds-thread" data-thread-key="2016/05/21/重启eclipse-color-theme失效的解决办法/" data-title="重启eclipse color theme失效的解决办法" data-url="http://www.yekaty.com/2016/05/21/重启eclipse-color-theme失效的解决办法/"></div>
+	<div class="ds-thread" data-thread-key="2016/05/21/使用sublime-text-build-system完成博客部署/" data-title="使用sublime text build system完成博客部署" data-url="http://www.yekaty.com/2016/05/21/使用sublime-text-build-system完成博客部署/"></div>
 </section>
 
 
