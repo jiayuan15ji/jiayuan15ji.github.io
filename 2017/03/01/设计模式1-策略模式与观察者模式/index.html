@@ -4,32 +4,32 @@
 <head>
   <meta charset="UTF-8">
   
-    <title>重启eclipse color theme失效的解决办法 | Yekaty&#39;s Blog</title>
+    <title>设计模式1-策略模式与观察者模式 | Yekaty&#39;s Blog</title>
     <meta name="viewport" content="width=device-width, initial-scale=1,user-scalable=no">
     
     <meta name="author" content="jiayuanJi">
     
 
     
-    <meta name="description" content="For Eclipse Mars users:
-In the main menu bar, go to Window &amp;gt; Preferences
-In the preference tree on the left, go to Oomph &amp;gt; Preference Recorder
-Check that it is enabled at the top.（record into wo">
+    <meta name="description" content="#策略模式
+顾名思义，对策略的封装。一类东西有共同的特点，都可以执行相同的动作，然而动作的细节却不尽相同，这个时候便将这个动作提取出来，作为一个接口，具体的动作实现这个接口，再与这类东西的超类进行组合。子类只需在构造时，设置好这些动作的具体实现类即可。当我们需要新增具有新动作的子类时，我们只需要新增动作的实现，而不需要修改超类。符合开闭原则，即对新增开放，对修改关闭。
+
+定义算法族，分别封装起来，">
 <meta property="og:type" content="article">
-<meta property="og:title" content="重启eclipse color theme失效的解决办法">
-<meta property="og:url" content="http://www.yekaty.com/2016/05/21/重启eclipse-color-theme失效的解决办法/index.html">
+<meta property="og:title" content="设计模式1-策略模式与观察者模式">
+<meta property="og:url" content="http://www.yekaty.com/2017/03/01/设计模式1-策略模式与观察者模式/index.html">
 <meta property="og:site_name" content="Yekaty's Blog">
-<meta property="og:description" content="For Eclipse Mars users:
-In the main menu bar, go to Window &amp;gt; Preferences
-In the preference tree on the left, go to Oomph &amp;gt; Preference Recorder
-Check that it is enabled at the top.（record into wo">
-<meta property="og:updated_time" content="2016-05-20T17:44:26.311Z">
+<meta property="og:description" content="#策略模式
+顾名思义，对策略的封装。一类东西有共同的特点，都可以执行相同的动作，然而动作的细节却不尽相同，这个时候便将这个动作提取出来，作为一个接口，具体的动作实现这个接口，再与这类东西的超类进行组合。子类只需在构造时，设置好这些动作的具体实现类即可。当我们需要新增具有新动作的子类时，我们只需要新增动作的实现，而不需要修改超类。符合开闭原则，即对新增开放，对修改关闭。
+
+定义算法族，分别封装起来，">
+<meta property="og:updated_time" content="2017-02-28T17:41:08.943Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="重启eclipse color theme失效的解决办法">
-<meta name="twitter:description" content="For Eclipse Mars users:
-In the main menu bar, go to Window &amp;gt; Preferences
-In the preference tree on the left, go to Oomph &amp;gt; Preference Recorder
-Check that it is enabled at the top.（record into wo">
+<meta name="twitter:title" content="设计模式1-策略模式与观察者模式">
+<meta name="twitter:description" content="#策略模式
+顾名思义，对策略的封装。一类东西有共同的特点，都可以执行相同的动作，然而动作的细节却不尽相同，这个时候便将这个动作提取出来，作为一个接口，具体的动作实现这个接口，再与这类东西的超类进行组合。子类只需在构造时，设置好这些动作的具体实现类即可。当我们需要新增具有新动作的子类时，我们只需要新增动作的实现，而不需要修改超类。符合开闭原则，即对新增开放，对修改关闭。
+
+定义算法族，分别封装起来，">
 
     
     
@@ -91,14 +91,14 @@ Check that it is enabled at the top.（record into wo">
 		<header class="article-info clearfix">
   <h1 itemprop="name">
     
-      <a href="/2016/05/21/重启eclipse-color-theme失效的解决办法/" title="重启eclipse color theme失效的解决办法" itemprop="url">重启eclipse color theme失效的解决办法</a>
+      <a href="/2017/03/01/设计模式1-策略模式与观察者模式/" title="设计模式1-策略模式与观察者模式" itemprop="url">设计模式1-策略模式与观察者模式</a>
   </h1>
   <p class="article-author">By
        
 		<a href="/about" title="jiayuanJi" target="_blank" itemprop="author">jiayuanJi</a>
 		
   <p class="article-time">
-    <time datetime="2016-05-20T16:03:45.000Z" itemprop="datePublished"> 发表于 2016-05-21</time>
+    <time datetime="2017-02-28T16:49:39.000Z" itemprop="datePublished"> 发表于 2017-03-01</time>
     
   </p>
 </header>
@@ -107,17 +107,22 @@ Check that it is enabled at the top.（record into wo">
 		<div id="toc" class="toc-article">
 			<strong class="toc-title">文章目录</strong>
 		
-			<ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#For-Eclipse-Mars-users"><span class="toc-number">1.</span> <span class="toc-text">For Eclipse Mars users:</span></a></li></ol>
+			
 		
 		</div>
 		
-		<h2 id="For-Eclipse-Mars-users"><a href="#For-Eclipse-Mars-users" class="headerlink" title="For Eclipse Mars users:"></a>For Eclipse Mars users:</h2><ol>
-<li>In the main menu bar, go to Window &gt; Preferences</li>
-<li>In the preference tree on the left, go to Oomph &gt; Preference Recorder</li>
-<li>Check that it is enabled at the top.（record into workspace）</li>
-<li>Set your color theme to the desired theme, and click OK.</li>
-<li>When restarting Eclipse, it may take a few moments to load your desired theme.</li>
-</ol>
+		<p>#策略模式</p>
+<p>顾名思义，对策略的封装。一类东西有共同的特点，都可以执行相同的动作，然而动作的细节却不尽相同，这个时候便将这个动作提取出来，作为一个接口，具体的动作实现这个接口，再与这类东西的超类进行组合。子类只需在构造时，设置好这些动作的具体实现类即可。当我们需要新增具有新动作的子类时，我们只需要新增动作的实现，而不需要修改超类。符合开闭原则，即对新增开放，对修改关闭。</p>
+<blockquote>
+<p>定义算法族，分别封装起来，让它们之间可以相互替换，此模式让算法的变化独立于使用算法的客户。</p>
+</blockquote>
+<p>#观察者模式</p>
+<p>观察者模式分为两类角色，一方是观察的人，另一方是被观察的人。被观察的人我们叫做主题好了。为什么要观察，因为主题有些东西或者说状态的变化是观察的人需要知道的。那么我们就需要在主题发生变化时，通知观察者这些变化，然后观察者做出自己的反应。首先，我们需要一个主题接口，定义三个方法：<strong>添加观察者</strong>，<strong>删除观察者</strong>，<strong>通知观察者</strong>。主题具体的实现类则需要组合的方式，对观察者的队列进行操作。关键还要有一个变化发生时调用的方法，以遍历整个观察者队列进行推送后的观察者自己的处理。因此，观察者就需要一个接口，定义一个处理的方法。具体的观察者就根据自己情况进行不同的处理。这样做使得主题不需要关心观察者的实现是否发生变化，或者是否出现了新的观察者，只需要知道，他们共同实现了观察者接口，所以观察者的变化不会影响到主题的代码，松耦合。</p>
+<p>另外观察者模式还分为 <strong>推</strong>和 <strong>拉</strong>两种方式。</p>
+<p>Java API中自带了主题超类Observable和观察者接口Observer。以继承的方式存在缺陷需要注意。</p>
+<blockquote>
+<p>在对象之间定义一对多的依赖，这样一来，当一个对象改变状态，以来它的对象都会收到通知，并自动更新。</p>
+</blockquote>
   
 	</div>
 		<footer class="article-footer clearfix">
@@ -125,13 +130,13 @@ Check that it is enabled at the top.（record into wo">
 
 <div class="article-categories">
   <span></span>
-  <a class="article-category-link" href="/categories/eclipse/">eclipse</a>
+  <a class="article-category-link" href="/categories/设计模式/">设计模式</a>
 </div>
 
 
   <div class="article-tags">
   
-  <span></span> <a href="/tags/eclipse/">eclipse</a>
+  <span></span> <a href="/tags/策略模式/">策略模式</a>
   </div>
 
 </div>
@@ -145,17 +150,10 @@ Check that it is enabled at the top.（record into wo">
 	
 <nav class="article-nav clearfix">
  
- <div class="prev" >
- <a href="/2016/05/21/使用sublime-text-build-system完成博客部署/" title="使用sublime text build system完成博客部署">
-  <span>
-  使用sublime text build system完成博客部署</span>
-</a>
-</div>
-
 
 <div class="next">
-<a href="/2016/05/20/mysql 5.7压缩包安装方法/"  title="MySql 5.7 压缩包安装方法">
- <span>MySql 5.7 压缩包安装方法
+<a href="/2016/05/21/使用sublime-text-build-system完成博客部署/"  title="使用sublime text build system完成博客部署">
+ <span>使用sublime text build system完成博客部署
 </span>
 </a>
 </div>
@@ -164,7 +162,7 @@ Check that it is enabled at the top.（record into wo">
 
 	
 <section id="comments" class="comment">
-	<div class="ds-thread" data-thread-key="2016/05/21/重启eclipse-color-theme失效的解决办法/" data-title="重启eclipse color theme失效的解决办法" data-url="http://www.yekaty.com/2016/05/21/重启eclipse-color-theme失效的解决办法/"></div>
+	<div class="ds-thread" data-thread-key="2017/03/01/设计模式1-策略模式与观察者模式/" data-title="设计模式1-策略模式与观察者模式" data-url="http://www.yekaty.com/2017/03/01/设计模式1-策略模式与观察者模式/"></div>
 </section>
 
 
