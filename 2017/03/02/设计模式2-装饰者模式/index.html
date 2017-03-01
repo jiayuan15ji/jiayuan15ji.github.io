@@ -4,23 +4,26 @@
 <head>
   <meta charset="UTF-8">
   
-    <title>还有几点要修改的地方 | Yekaty&#39;s Blog</title>
+    <title>设计模式2-装饰着模式 | Yekaty&#39;s Blog</title>
     <meta name="viewport" content="width=device-width, initial-scale=1,user-scalable=no">
     
     <meta name="author" content="jiayuanJi">
     
 
     
-    <meta name="description" content="2016年5月12日，新的hexo博客终于弄出个模样了，还有部分地方需要改进。">
+    <meta name="description" content="装饰者模式动态地给组件附加特定的功能。首先定义组件的抽象父类，各种不同的组件继承自该父类，而其不同的行为却并不是通过继承方式实现，是通过装饰者的包装。首先装饰者抽象类也是通过继承了该组件，通过组合的方式包含了要装饰的组件，形成了新的装饰后的组件，具备了新的功能。并可以多次装饰以获得多重能力。在java.io中大多数流中都应用到了装饰模式。
+装饰模式符合开闭原则，将责任的实现放到装饰者身上，组件只是">
 <meta property="og:type" content="article">
-<meta property="og:title" content="还有几点要修改的地方">
-<meta property="og:url" content="http://www.yekaty.com/2016/05/12/还有几点要修改的地方/index.html">
+<meta property="og:title" content="设计模式2-装饰着模式">
+<meta property="og:url" content="http://www.yekaty.com/2017/03/02/设计模式2-装饰者模式/index.html">
 <meta property="og:site_name" content="Yekaty's Blog">
-<meta property="og:description" content="2016年5月12日，新的hexo博客终于弄出个模样了，还有部分地方需要改进。">
-<meta property="og:updated_time" content="2016-05-11T19:47:57.381Z">
+<meta property="og:description" content="装饰者模式动态地给组件附加特定的功能。首先定义组件的抽象父类，各种不同的组件继承自该父类，而其不同的行为却并不是通过继承方式实现，是通过装饰者的包装。首先装饰者抽象类也是通过继承了该组件，通过组合的方式包含了要装饰的组件，形成了新的装饰后的组件，具备了新的功能。并可以多次装饰以获得多重能力。在java.io中大多数流中都应用到了装饰模式。
+装饰模式符合开闭原则，将责任的实现放到装饰者身上，组件只是">
+<meta property="og:updated_time" content="2017-03-01T19:28:27.631Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="还有几点要修改的地方">
-<meta name="twitter:description" content="2016年5月12日，新的hexo博客终于弄出个模样了，还有部分地方需要改进。">
+<meta name="twitter:title" content="设计模式2-装饰着模式">
+<meta name="twitter:description" content="装饰者模式动态地给组件附加特定的功能。首先定义组件的抽象父类，各种不同的组件继承自该父类，而其不同的行为却并不是通过继承方式实现，是通过装饰者的包装。首先装饰者抽象类也是通过继承了该组件，通过组合的方式包含了要装饰的组件，形成了新的装饰后的组件，具备了新的功能。并可以多次装饰以获得多重能力。在java.io中大多数流中都应用到了装饰模式。
+装饰模式符合开闭原则，将责任的实现放到装饰者身上，组件只是">
 
     
     
@@ -82,14 +85,14 @@
 		<header class="article-info clearfix">
   <h1 itemprop="name">
     
-      <a href="/2016/05/12/还有几点要修改的地方/" title="还有几点要修改的地方" itemprop="url">还有几点要修改的地方</a>
+      <a href="/2017/03/02/设计模式2-装饰者模式/" title="设计模式2-装饰着模式" itemprop="url">设计模式2-装饰着模式</a>
   </h1>
   <p class="article-author">By
        
 		<a href="/about" title="jiayuanJi" target="_blank" itemprop="author">jiayuanJi</a>
 		
   <p class="article-time">
-    <time datetime="2016-05-11T19:36:27.000Z" itemprop="datePublished"> 发表于 2016-05-12</time>
+    <time datetime="2017-03-01T16:40:10.000Z" itemprop="datePublished"> 发表于 2017-03-02</time>
     
   </p>
 </header>
@@ -98,15 +101,15 @@
 		<div id="toc" class="toc-article">
 			<strong class="toc-title">文章目录</strong>
 		
-			<ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#主题"><span class="toc-number">1.</span> <span class="toc-text">主题</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#图片"><span class="toc-number">2.</span> <span class="toc-text">图片</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#联系方式"><span class="toc-number">3.</span> <span class="toc-text">联系方式</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#about页面"><span class="toc-number">4.</span> <span class="toc-text">about页面</span></a></li></ol>
+			<ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#装饰者模式"><span class="toc-number">1.</span> <span class="toc-text">装饰者模式</span></a></li></ol>
 		
 		</div>
 		
-		<p>2016年5月12日，新的hexo博客终于弄出个模样了，还有部分地方需要改进。<br><a id="more"></a></p>
-<h1 id="主题"><a href="#主题" class="headerlink" title="主题"></a>主题</h1><p>颜色字体修改</p>
-<h1 id="图片"><a href="#图片" class="headerlink" title="图片"></a>图片</h1><p>修改简介照片，浏览器tab标签图片，ios图片，logo图片</p>
-<h1 id="联系方式"><a href="#联系方式" class="headerlink" title="联系方式"></a>联系方式</h1><p>几个链接没改</p>
-<h1 id="about页面"><a href="#about页面" class="headerlink" title="about页面"></a>about页面</h1><p>添加博客说明页面</p>
+		<h1 id="装饰者模式"><a href="#装饰者模式" class="headerlink" title="装饰者模式"></a>装饰者模式</h1><p>动态地给组件附加特定的功能。首先定义组件的抽象父类，各种不同的组件继承自该父类，而其不同的行为却并不是通过继承方式实现，是通过装饰者的包装。首先装饰者抽象类也是通过继承了该组件，通过组合的方式包含了要装饰的组件，形成了新的装饰后的组件，具备了新的功能。并可以多次装饰以获得多重能力。在java.io中大多数流中都应用到了装饰模式。</p>
+<p>装饰模式符合开闭原则，将责任的实现放到装饰者身上，组件只是对类型的一种说明。当我们需要一种新功能的组件时，不需要对组件做修改，而是创建新的装饰者来包装组件，给组件赋予新的生命。所以该模式对修改关闭，对扩展开发，是很好的做法。</p>
+<blockquote>
+<p>动态地将责任附加到对象上。想要扩大功能，装饰者提供有利于继承的另一种选择。</p>
+</blockquote>
   
 	</div>
 		<footer class="article-footer clearfix">
@@ -114,13 +117,13 @@
 
 <div class="article-categories">
   <span></span>
-  <a class="article-category-link" href="/categories/blog/">blog</a>
+  <a class="article-category-link" href="/categories/设计模式/">设计模式</a>
 </div>
 
 
   <div class="article-tags">
   
-  <span></span> <a href="/tags/blog/">blog</a>
+  <span></span> <a href="/tags/装饰者模式/">装饰者模式</a>
   </div>
 
 </div>
@@ -134,19 +137,19 @@
 	
 <nav class="article-nav clearfix">
  
- <div class="prev" >
- <a href="/2016/05/12/Markdown语法测试/" title="Markdown语法测试">
-  <span>
-  Markdown语法测试</span>
+
+<div class="next">
+<a href="/2017/03/01/设计模式1-策略模式与观察者模式/"  title="设计模式1-策略模式与观察者模式">
+ <span>设计模式1-策略模式与观察者模式
+</span>
 </a>
 </div>
-
 
 </nav>
 
 	
 <section id="comments" class="comment">
-	<div class="ds-thread" data-thread-key="2016/05/12/还有几点要修改的地方/" data-title="还有几点要修改的地方" data-url="http://www.yekaty.com/2016/05/12/还有几点要修改的地方/"></div>
+	<div class="ds-thread" data-thread-key="2017/03/02/设计模式2-装饰者模式/" data-title="设计模式2-装饰着模式" data-url="http://www.yekaty.com/2017/03/02/设计模式2-装饰者模式/"></div>
 </section>
 
 
