@@ -13,30 +13,18 @@
 
     
     <meta name="description" content="单例模式单例模式确保了一个类最多只有一个实例，并提供了访问这个实例的全局点。
-简单实现方法：`public class Singleton{    private volatile static Singleton uniqueInstance;
-private singleton(){}
-
-public static Singleton getInstance(){
-    if(uniqueI">
+简单实现方法：12345678910111213141516public class Singleton&amp;#123;    private volatile static Singleton uniqueInstance;    private singleton()&amp;#123;&amp;#125;    public stat">
 <meta property="og:type" content="article">
 <meta property="og:title" content="设计模式4-单例模式">
 <meta property="og:url" content="http://www.yekaty.com/2017/03/09/设计模式4-单例模式/index.html">
 <meta property="og:site_name" content="Yekaty's Blog">
 <meta property="og:description" content="单例模式单例模式确保了一个类最多只有一个实例，并提供了访问这个实例的全局点。
-简单实现方法：`public class Singleton{    private volatile static Singleton uniqueInstance;
-private singleton(){}
-
-public static Singleton getInstance(){
-    if(uniqueI">
-<meta property="og:updated_time" content="2017-03-09T13:02:15.950Z">
+简单实现方法：12345678910111213141516public class Singleton&amp;#123;    private volatile static Singleton uniqueInstance;    private singleton()&amp;#123;&amp;#125;    public stat">
+<meta property="og:updated_time" content="2017-03-09T13:07:24.638Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="设计模式4-单例模式">
 <meta name="twitter:description" content="单例模式单例模式确保了一个类最多只有一个实例，并提供了访问这个实例的全局点。
-简单实现方法：`public class Singleton{    private volatile static Singleton uniqueInstance;
-private singleton(){}
-
-public static Singleton getInstance(){
-    if(uniqueI">
+简单实现方法：12345678910111213141516public class Singleton&amp;#123;    private volatile static Singleton uniqueInstance;    private singleton()&amp;#123;&amp;#125;    public stat">
 
     
     
@@ -119,20 +107,7 @@ public static Singleton getInstance(){
 		</div>
 		
 		<h1 id="单例模式"><a href="#单例模式" class="headerlink" title="单例模式"></a>单例模式</h1><p>单例模式确保了一个类最多只有一个实例，并提供了访问这个实例的全局点。</p>
-<p>简单实现方法：<br>`public class Singleton{<br>    private volatile static Singleton uniqueInstance;</p>
-<pre><code>private singleton(){}
-
-public static Singleton getInstance(){
-    if(uniqueInstance == null){
-        synchronized (Singleton.class){
-            if(uniqueInstance == null){
-                uniqueInstance = new Singleton();
-            }
-        }
-    }
-    return uniqueInstance;
-}   
-</code></pre><p>}`</p>
+<p>简单实现方法：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line">public class Singleton&#123;</span><br><span class="line">    private volatile static Singleton uniqueInstance;</span><br><span class="line"></span><br><span class="line">    private singleton()&#123;&#125;</span><br><span class="line"></span><br><span class="line">    public static Singleton getInstance()&#123;</span><br><span class="line">        if(uniqueInstance == null)&#123;</span><br><span class="line">            synchronized (Singleton.class)&#123;</span><br><span class="line">                if(uniqueInstance == null)&#123;</span><br><span class="line">                    uniqueInstance = new Singleton();</span><br><span class="line">                &#125;</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">        return uniqueInstance;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
 <blockquote>
 <p>确保一个类只有一个实例，并提供一个全局访问点。</p>
 </blockquote>
@@ -250,11 +225,7 @@ public static Singleton getInstance(){
 			
 		
 			
-				<li><a href="/tags/观察者模式/" title="观察者模式">观察者模式<sup>1</sup></a></li>
-			
-		
-			
-				<li><a href="/tags/sublime/" title="sublime">sublime<sup>1</sup></a></li>
+				<li><a href="/tags/策略模式/" title="策略模式">策略模式<sup>1</sup></a></li>
 			
 		
 			
@@ -262,15 +233,23 @@ public static Singleton getInstance(){
 			
 		
 			
-				<li><a href="/tags/安装/" title="安装">安装<sup>1</sup></a></li>
-			
-		
-			
-				<li><a href="/tags/策略模式/" title="策略模式">策略模式<sup>1</sup></a></li>
+				<li><a href="/tags/sublime/" title="sublime">sublime<sup>1</sup></a></li>
 			
 		
 			
 				<li><a href="/tags/markdown/" title="markdown">markdown<sup>1</sup></a></li>
+			
+		
+			
+				<li><a href="/tags/装饰者模式/" title="装饰者模式">装饰者模式<sup>1</sup></a></li>
+			
+		
+			
+				<li><a href="/tags/安装/" title="安装">安装<sup>1</sup></a></li>
+			
+		
+			
+				<li><a href="/tags/观察者模式/" title="观察者模式">观察者模式<sup>1</sup></a></li>
 			
 		
 			
@@ -283,10 +262,6 @@ public static Singleton getInstance(){
 		
 			
 				<li><a href="/tags/单例模式/" title="单例模式">单例模式<sup>1</sup></a></li>
-			
-		
-			
-				<li><a href="/tags/装饰者模式/" title="装饰者模式">装饰者模式<sup>1</sup></a></li>
 			
 		
 			
