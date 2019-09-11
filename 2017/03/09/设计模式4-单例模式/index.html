@@ -12,19 +12,16 @@
     
 
     
-    <meta name="description" content="单例模式单例模式确保了一个类最多只有一个实例，并提供了访问这个实例的全局点。
-简单实现方法：12345678910111213141516public class Singleton&amp;#123;    private volatile static Singleton uniqueInstance;    private singleton()&amp;#123;&amp;#125;    public stat">
+    <meta name="description" content="简单记录">
 <meta property="og:type" content="article">
 <meta property="og:title" content="设计模式4-单例模式">
 <meta property="og:url" content="http://www.yekaty.com/2017/03/09/设计模式4-单例模式/index.html">
 <meta property="og:site_name" content="Yekaty's Blog">
-<meta property="og:description" content="单例模式单例模式确保了一个类最多只有一个实例，并提供了访问这个实例的全局点。
-简单实现方法：12345678910111213141516public class Singleton&amp;#123;    private volatile static Singleton uniqueInstance;    private singleton()&amp;#123;&amp;#125;    public stat">
-<meta property="og:updated_time" content="2017-03-09T13:07:26.000Z">
+<meta property="og:description" content="简单记录">
+<meta property="og:updated_time" content="2019-09-11T09:47:52.152Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="设计模式4-单例模式">
-<meta name="twitter:description" content="单例模式单例模式确保了一个类最多只有一个实例，并提供了访问这个实例的全局点。
-简单实现方法：12345678910111213141516public class Singleton&amp;#123;    private volatile static Singleton uniqueInstance;    private singleton()&amp;#123;&amp;#125;    public stat">
+<meta name="twitter:description" content="简单记录">
 
     
     
@@ -106,7 +103,8 @@
 		
 		</div>
 		
-		<h1 id="单例模式"><a href="#单例模式" class="headerlink" title="单例模式"></a>单例模式</h1><p>单例模式确保了一个类最多只有一个实例，并提供了访问这个实例的全局点。</p>
+		<p>简单记录<br><a id="more"></a></p>
+<h1 id="单例模式"><a href="#单例模式" class="headerlink" title="单例模式"></a>单例模式</h1><p>单例模式确保了一个类最多只有一个实例，并提供了访问这个实例的全局点。</p>
 <p>简单实现方法：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line">public class Singleton&#123;</span><br><span class="line">    private volatile static Singleton uniqueInstance;</span><br><span class="line"></span><br><span class="line">    private singleton()&#123;&#125;</span><br><span class="line"></span><br><span class="line">    public static Singleton getInstance()&#123;</span><br><span class="line">        if(uniqueInstance == null)&#123;</span><br><span class="line">            synchronized (Singleton.class)&#123;</span><br><span class="line">                if(uniqueInstance == null)&#123;</span><br><span class="line">                    uniqueInstance = new Singleton();</span><br><span class="line">                &#125;</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">        return uniqueInstance;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
 <blockquote>
 <p>确保一个类只有一个实例，并提供一个全局访问点。</p>
@@ -254,6 +252,10 @@
 			
 		
 			
+				<li><a href="/tags/markdown/" title="markdown">markdown<sup>1</sup></a></li>
+			
+		
+			
 				<li><a href="/tags/mysql/" title="mysql">mysql<sup>1</sup></a></li>
 			
 		
@@ -262,11 +264,7 @@
 			
 		
 			
-				<li><a href="/tags/markdown/" title="markdown">markdown<sup>1</sup></a></li>
-			
-		
-			
-				<li><a href="/tags/工厂模式/" title="工厂模式">工厂模式<sup>1</sup></a></li>
+				<li><a href="/tags/sublime/" title="sublime">sublime<sup>1</sup></a></li>
 			
 		
 			
@@ -274,7 +272,7 @@
 			
 		
 			
-				<li><a href="/tags/sublime/" title="sublime">sublime<sup>1</sup></a></li>
+				<li><a href="/tags/抽象工厂模式/" title="抽象工厂模式">抽象工厂模式<sup>1</sup></a></li>
 			
 		
 			
@@ -294,7 +292,7 @@
 			
 		
 			
-				<li><a href="/tags/抽象工厂模式/" title="抽象工厂模式">抽象工厂模式<sup>1</sup></a></li>
+				<li><a href="/tags/工厂模式/" title="工厂模式">工厂模式<sup>1</sup></a></li>
 			
 		
 		</ul>
