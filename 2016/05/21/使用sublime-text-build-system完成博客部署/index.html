@@ -18,7 +18,7 @@
 <meta property="og:url" content="http://www.yekaty.com/2016/05/21/使用sublime-text-build-system完成博客部署/index.html">
 <meta property="og:site_name" content="Yekaty's Blog">
 <meta property="og:description" content="本文介绍如何使用sublime text编辑器的build system功能，快速部署编辑好的博文。">
-<meta property="og:updated_time" content="2018-10-05T13:09:34.000Z">
+<meta property="og:updated_time" content="2019-09-11T08:52:41.433Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="使用sublime text build system完成博客部署">
 <meta name="twitter:description" content="本文介绍如何使用sublime text编辑器的build system功能，快速部署编辑好的博文。">
@@ -109,9 +109,9 @@
 <li>Tools -&gt; Build System -&gt; New Build System新建一个编译处理文件。</li>
 <li><p>hexo博客的编译处理文件：</p>
 <figure class="highlight json"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">&#123;</span><br><span class="line">	<span class="attr">"working_dir"</span>: <span class="string">"C:\\Users\\Yekaty\\Documents\\GitHub\\hexo"</span>,</span><br><span class="line">	<span class="attr">"selector"</span>: [<span class="string">"text.md"</span>],</span><br><span class="line">	<span class="attr">"cmd"</span>: [<span class="string">"hexo.cmd"</span>,<span class="string">"clean"</span>,<span class="string">"&amp;&amp;"</span>,<span class="string">"hexo.cmd"</span>,<span class="string">"g"</span>,<span class="string">"&amp;&amp;"</span>,<span class="string">"hexo.cmd"</span>,<span class="string">"d"</span>]</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<p>将文件保存在user目录下。关于编译处理文件的语法，可参照<a href="http://sublime-text.readthedocs.io/en/latest/reference/build_systems.html" target="_blank" rel="external">这里</a>。</p>
+<p>将文件保存在user目录下。关于编译处理文件的语法，可参照<a href="http://sublime-text.readthedocs.io/en/latest/reference/build_systems.html" target="_blank" rel="external">这里</a>。   </p>
 </li>
-<li>此时，编辑好博文后，便可使用<strong>Ctrl+B</strong>快捷键，快速完成博文部署工作。</li>
+<li>此时，编辑好博文后，选择工具-&gt;Build System-&gt;Auto Build，便可使用<strong>Ctrl+B</strong>快捷键(初次使用需手动指定刚刚保存的md.sublime-build)，快速完成博文部署工作。</li>
 </ol>
   
 	</div>
@@ -260,10 +260,6 @@
 			
 		
 			
-				<li><a href="/tags/markdown/" title="markdown">markdown<sup>1</sup></a></li>
-			
-		
-			
 				<li><a href="/tags/mysql/" title="mysql">mysql<sup>1</sup></a></li>
 			
 		
@@ -276,11 +272,7 @@
 			
 		
 			
-				<li><a href="/tags/测试/" title="测试">测试<sup>1</sup></a></li>
-			
-		
-			
-				<li><a href="/tags/hexo/" title="hexo">hexo<sup>1</sup></a></li>
+				<li><a href="/tags/markdown/" title="markdown">markdown<sup>1</sup></a></li>
 			
 		
 			
@@ -288,7 +280,15 @@
 			
 		
 			
-				<li><a href="/tags/观察者模式/" title="观察者模式">观察者模式<sup>1</sup></a></li>
+				<li><a href="/tags/hexo/" title="hexo">hexo<sup>1</sup></a></li>
+			
+		
+			
+				<li><a href="/tags/测试/" title="测试">测试<sup>1</sup></a></li>
+			
+		
+			
+				<li><a href="/tags/装饰者模式/" title="装饰者模式">装饰者模式<sup>1</sup></a></li>
 			
 		
 			
@@ -304,7 +304,7 @@
 			
 		
 			
-				<li><a href="/tags/装饰者模式/" title="装饰者模式">装饰者模式<sup>1</sup></a></li>
+				<li><a href="/tags/观察者模式/" title="观察者模式">观察者模式<sup>1</sup></a></li>
 			
 		
 		</ul>
